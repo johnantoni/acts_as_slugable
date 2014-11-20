@@ -1,6 +1,7 @@
 # Configure Rails Environment
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 ENV['RAILS_ENV'] = 'test'
+
 require 'rails'
 require 'rails/test_help'
 require 'active_record'
