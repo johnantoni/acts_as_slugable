@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Gem that implements the old behavior of acts_as_slugable Rails Plugin.'
   s.description = 'This gem is an attempt at converting an old Rails 2 plugin into a new Gem.'
   s.license     = 'MIT'
+  s.platform    = Gem::Platform::RUBY
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['test/**/*']

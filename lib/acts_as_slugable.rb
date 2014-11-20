@@ -70,7 +70,6 @@ module Slugable
 
           acts_as_slugable_class.transaction do
             while existing != nil
-              #existing = acts_as_slugable_class.find(:first, conditions: ["#{slug_column} = ? and #{slug_scope_condition}", proposed_slug + suffix])
               existing = acts_as_slugable_class.where(["#{slug_column} = ? and #{slug_scope_condition}", proposed_slug + suffix]).first
               if existing
                 if suffix.empty?
