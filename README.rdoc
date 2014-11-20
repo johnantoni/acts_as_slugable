@@ -51,3 +51,5 @@ Thanks to Andrew White (http://pixeltrix.co.uk/) for fixing a conflict with <tt>
 Thanks to Philip Hallstrom (http://pjkh.com/) for pointing out some redundant code.
 
 Thanks to Arne De Herdt for mking this a gem.
+
+Thanks to Isoptope (http://isotopedev.com/) on Stackoverflow for resolving the query Issue.
