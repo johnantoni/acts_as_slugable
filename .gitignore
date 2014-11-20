@@ -1,0 +1,5 @@
+.bundle/
+*.log
+*.iml
+.idea
+.DS_Store
