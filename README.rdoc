@@ -22,13 +22,13 @@ In your target table, add a column to hold the URL slug.
 === With scope
 
   class Page < ActiveRecord::Base
-    acts_as_slugable :source_column => :title, :target_column => :url_slug, :scope => :parent
+    acts_as_slugable :source_column => :title, :slug_column => :url_slug, :scope => :parent
   end
 
 === Without scope
 
   class Post < ActiveRecord::Base
-    acts_as_slugable :source_column => :title, :target_column => :url_slug
+    acts_as_slugable :source_column => :title, :slug_column => :url_slug
   end
 
 ===  A sample link
@@ -49,3 +49,5 @@ Created by Alex Dunae (http://dunae.ca/), 2006-09, though it takes a village to 
 Thanks to Andrew White (http://pixeltrix.co.uk/) for fixing a conflict with <tt>acts_as_list</tt>.
 
 Thanks to Philip Hallstrom (http://pjkh.com/) for pointing out some redundant code.
+
+Thanks to Arne De Herdt for mking this a gem.
