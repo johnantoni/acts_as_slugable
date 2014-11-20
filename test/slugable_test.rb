@@ -58,15 +58,11 @@ class ActsAsSlugableTest < ActiveSupport::TestCase
 
   # Test the uniqueness
   test 'uniqueness' do
-    puts "--- uniqueness test ---"
-
     t = 'Unique title'
 
-    puts "--- creating first page ---"
     pg1 = Page.create(title: t, parent_id: 1)
     assert pg1.valid?
 
-    puts "--- creating second page ---"
     pg2 = Page.create(title: t, parent_id: 1)
     assert pg2.valid?
 
@@ -80,7 +76,7 @@ class ActsAsSlugableTest < ActiveSupport::TestCase
     pg1 = Page.create(title: t, parent_id: 1)
     assert pg1.valid?
 
-    pg2 = Page.create(title: t, parent_id: 1)
+    pg2 = Page.create(title: t, parent_id: 2)
     assert pg2.valid?
 
     assert_equal pg1.url_slug, pg2.url_slug

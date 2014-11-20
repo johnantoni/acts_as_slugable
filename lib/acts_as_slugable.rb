@@ -69,30 +69,20 @@ module Slugable
           existing = true
 
           acts_as_slugable_class.transaction do
-            puts "entering loop"
-
             while existing != nil
-              puts "proposed slug: #{proposed_slug}"
-              puts "current suffix: #{suffix}"
-
-              existing = acts_as_slugable_class.find(:first, conditions: ["#{slug_column} = ? and #{slug_scope_condition}", proposed_slug + suffix])
-
-              puts "found a object: #{existing.inspect}"
-
+              #existing = acts_as_slugable_class.find(:first, conditions: ["#{slug_column} = ? and #{slug_scope_condition}", proposed_slug + suffix])
+              existing = acts_as_slugable_class.where(["#{slug_column} = ? and #{slug_scope_condition}", proposed_slug + suffix]).first
               if existing
                 if suffix.empty?
                   suffix = "-0"
                 else
                   suffix.succ!
                 end
-
-                puts "suffix set to #{suffix}"
               end
             end
           end
 
           self[slug_column] = proposed_slug + suffix
-          puts "slug set to: #{self[slug_column]}"
         end
       end
     end
