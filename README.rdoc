@@ -2,6 +2,10 @@
 
 Generates a URL slug based on a specific fields (e.g. title).
 
+Original repo: https://github.com/alexdunae/acts_as_slugable
+
+Fixed for Rails 5
+
 A url slug is a string derived from a specific field which can the be used in a URL.  For instance, a page with the title <tt>My page</tt> would have a URL slug of <tt>my-page</tt>.
 
 The slug is generated on save and create actions.  If the field has an existing URL slug (like when editing an existing record) the URL slug is preserved.
